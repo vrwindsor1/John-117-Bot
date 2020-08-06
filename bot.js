@@ -22,11 +22,11 @@ fs.readdir("./Commands/", (err, files) => {
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`)
-    bot.user.setActivity("Waiting on Halo Infinite to come out.", {type: "HELLO"});
+    bot.user.setActivity(`Waiting on Halo Infinite to come out.`, {type: `HELLO`});
 });
 
 bot.on("guildMemberAdd", async member => {
-    const channel = member.guild.channels.cache.find(channel => channel.name === "general");
+    const channel = member.guild.channels.cache.find(channel => channel.name === "welcome");
     if(!channel) return;
     channel.send(`I would like to be the first to welcome you to Vaylin's server, ${member}. I hope you have a good time!`);
     member.send("I would like to be the first to welcome you to Vaylin's server. I hope you have a good time!");
