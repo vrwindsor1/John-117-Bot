@@ -22,7 +22,7 @@ fs.readdir("./Commands/", (err, files) => {
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`)
-    bot.user.setActivity(`Waiting on Halo Infinite to come out.`, {type: `HELLO`});
+    bot.user.setActivity('Halo: Infinite trailer', {type: 'WATCHING'});
 });
 
 bot.on("guildMemberAdd", async member => {
